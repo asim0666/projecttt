@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contaner{
+            height: 500px;
+            width: 500px;
+            background-color: aqua;
+            background-image: url(clock.webp) ;
+            background-size:cover ;
+            position: relative;
+        }
+        .box{
+            height: 160px;
+            width: 10px;
+            background-color: brown;
+            position: absolute;
+            left: 244px;
+            top: 100px;
+            animation: box 60s linear infinite;
+            transform-origin: bottom;
+            z-index: 1;
+        }
+        @keyframes box{
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        .box1{
+            height: 160px;
+            width: 10px;
+            background-color: rebeccapurple;
+            position: absolute;
+            left: 244px;
+            top: 100px;
+            animation: minute 3600s linear infinite;
+            transform-origin: bottom;
+        }
+         @keyframes minute{
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(360deg);
+            } 
+        }
+
+        .box2{
+            height: 160px;
+            width: 10px;
+            background-color: peru;
+            position: absolute;
+            left: 244px;
+            top: 100px;
+            animation: hour 43200s linear infinite;
+            transform-origin: bottom;
+            transform: rotate(90deg) !important;
+        }
+        @keyframes hour{
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contaner">
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
